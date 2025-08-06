@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paddle Checkout</title>
+  <!-- Подключаем Paddle JS -->
+  <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+  <script>
+    // Инициализация Paddle с вашим public API ключом
+    Paddle.Setup({vendor:30653}); 
+
+    // Функция для открытия чекаута
+    function openCheckout() {
+      var itemsList = [
+        {
+          priceId: 'pri_01jtf5jz4wc555he1zddg0mgcw', // ID ценового предложения для первого продукта
+          quantity: 1
+        },
+      ];
+
+      Paddle.Checkout.open({
+        settings: {
+          displayMode: "overlay",    // Выбор режима отображения (модальное окно)
+          theme: "light",           // Тема оформления
+          locale: "en",             // Язык чекаута
+          successUrl: "http://localhost:3000/", // URL для перенаправления после успешной оплаты
+          frameInitialHeight: 450,  // Рекомендуемая высота для отображения
+        },
+        items: itemsList,  // Список продуктов, которые передаются в Paddle
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Welcome to the Checkout</h1>
+  <p>Click the button below to proceed to checkout:</p>
+  
+  <!-- Кнопка для открытия чекаута -->
+  <button onclick="openCheckout()">Proceed to Checkout</button>
+</body>
+</html>

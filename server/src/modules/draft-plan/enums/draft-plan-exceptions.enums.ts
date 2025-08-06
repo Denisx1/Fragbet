@@ -1,0 +1,4 @@
+export enum DraftPlanExceptions {
+  PRODUCT_NOT_FOUND = "PRODUCT_NOT_FOUND",
+  DRAFT_PLAN_NOT_FOUND = "DRAFT_PLAN_NOT_FOUND",
+}
