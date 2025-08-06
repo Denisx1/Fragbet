@@ -1,0 +1,51 @@
+.sidebar {
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    align-self: stretch; /* Растягиваемся по высоте родителя flex */
+    margin-top: 15px;
+    margin-left: 3px;
+  }
+  .block1 {
+    width: 100%;
+    border-radius: 10px;
+    height: 340px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+  }
+  .stickyWrapperScroll {
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    align-self: stretch;
+    flex-grow: 1;
+    padding-bottom: 10px;
+  }
+  .stickyWrapper {
+    position: sticky;
+    bottom: 0; /* прилипает к верхней части окна */
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    border-radius: 5px;
+    padding-top: 10px;
+    margin: 0 auto;
+    margin-top: auto;
+  }
+  
+  .block2,.block3 {
+    width: 100%;
+    border-radius: 10px;
+    height: 430px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+  }

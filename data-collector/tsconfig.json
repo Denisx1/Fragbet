@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "./dist",  // Папка, в которой будут храниться скомпилированные файлы
+    "rootDir": "./src",  // Папка, где лежат исходные TypeScript файлы
+    "esModuleInterop": true,  // Для работы с модулями, если нужно
+    "strict": true,  // Включает строгий режим, если нужно
+    "moduleResolution": "node",  // Для Node.js
+    "target": "ES6",  // Целевая версия JavaScript (например, ES6)
+    "module": "commonjs",  // Тип модуля, который компилировать
+    "sourceMap": true  // Генерация карт исходников для отладки
+  },
+  "include": ["src/**/*.ts", "src/index.ts"],  // Указывает, какие файлы должны компилироваться
+  "exclude": ["node_modules"]  // Исключает node_modules из компиляции
+}

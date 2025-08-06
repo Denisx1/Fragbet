@@ -1,0 +1,103 @@
+.layout {
+  --primary-color: #0f8deb;
+  --primary-color-rgb: 15, 141, 235;
+  --attacker-side-color: #e0aa5a;
+  --attacker-side-color-rgb: 224, 170, 90;
+  --defender-side-color: #0f8deb;
+  --defender-side-color-rgb: 15, 141, 235;
+  --text-reversed-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* центрирует по горизонтали */
+  min-height: 100vh;
+  background-color: black;
+}
+
+.cBannerPartnerBranding {
+  background: linear-gradient(#03112f00 29.22%, #000000e6 89.38%, #000),
+    radial-gradient(
+      91.85% 80.7% at 50% 100%,
+      #0079f9 0,
+      #007bff 30%,
+      #071a7c00 100%
+    ),
+    #03122f;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 224px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: stretch;
+}
+.o-wrapper--global--container {
+  width: 100%;
+  max-width: 1264px;
+  display: flex;
+  background-color: #1b1e22;
+  position: relative;
+  padding-top: 281px;
+}
+.contentContainer {
+  display: flex;
+  gap: 15px;
+  margin: 0 20px;
+  align-items: stretch; /* <-- важно */
+  min-height: 150vh;
+}
+.tableGroup {
+  background: #22262c;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  min-height: 50vh;
+}
+.mainBox {
+  width: 80%;
+  max-width: 930px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  gap: 13px;
+  padding: 15px;
+  flex: 1;
+}
+
+.uWrapperGlobal {
+  width: 100%;
+  max-width: 1264px;
+  display: flex;
+  background-color: white;
+  padding-top: 174px;
+}
+
+.cBannerCustomTop {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.title {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  font-size: 15px;
+  color: #fff;
+  padding-left: 23px;
+}
+.information {
+  padding: 0 16px;
+  line-height: 0.8;
+}
+
+/* ul {
+  margin: 0;
+  padding-left: 15px;
+}
+li {
+  padding-bottom: 8px;
+} */

@@ -1,0 +1,22 @@
+.dateDivider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .dateDivider::before,
+  .dateDivider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #fff;
+  }
+  
+  .dateDividerText {
+    padding: 0 30px;
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap;
+  }

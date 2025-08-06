@@ -1,0 +1,47 @@
+.ulList {
+  position: relative;
+  display: flex;
+  height: 70%; /* задаём высоту списку */
+  margin: 0;
+  list-style: none;
+}
+
+.navLink {
+  height: 100%;
+  padding: 0 12px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid transparent; /* Рамка всегда есть, но прозрачная */
+  border-radius: 8px;
+  box-sizing: border-box; /* Очень важно! */
+  transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+.navLink:hover {
+  color: white; /* цвет текста не меняется при наведении */
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+}
+.navLinkActive {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+.cAppDisciplineSwitcherDesktop {
+  align-items: center;
+  margin-top: 6px;
+  padding-bottom: 8px;
+  display: flex;
+  position: relative;
+  height: 100%;
+}

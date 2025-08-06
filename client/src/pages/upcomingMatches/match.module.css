@@ -1,0 +1,58 @@
+.matchContainer {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.tierContainer {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 10px;
+}
+.doubleLine {
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap; /* обязательно — запрещаем перенос */
+  min-width: 0; /* важно! */
+  align-items: flex-start;
+}
+.leftBlock,
+.rightBlock {
+  width: 50%;
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: rgba(210, 208, 208, 0.127);
+  position: relative;
+  flex: 1; /* вместо width: 50% */
+  min-width: 0; /* 💥 обязательно — позволяет блоку сжиматься */
+  overflow: hidden; /* обрезает всё, что выходит */
+  align-items: flex-start;
+}
+
+.loadingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px; /* или на весь экран */
+}
+
+.spinner {
+  border: 6px solid #f3f3f3; /* светлый фон */
+  border-top: 6px solid #3498db; /* цвет "вращающейся" части */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
