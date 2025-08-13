@@ -1,0 +1,32 @@
+.teamBlock {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+.nameBlock.left {
+  justify-content: flex-end;
+}
+.nameBlock.right {
+  justify-content: flex-start;
+}
+.nameBlock {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* скрываем лишнее */
+  text-overflow: ellipsis; /* добавляем "..." */
+  white-space: nowrap; /* текст в одну строку */
+}
+.nameBlock span {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

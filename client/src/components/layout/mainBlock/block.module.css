@@ -32,4 +32,9 @@
   display: flex;
   justify-content: center;
 }
+.newMatches {
+  width: 100%;
+  display: flex;
+  
+}
 

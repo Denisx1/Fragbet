@@ -27,7 +27,9 @@ const MatchTierBlock: React.FC<MatchTierBlockProps> = ({
           <div className={style.matches}>
             <TableLine layout={layout} />
             {matches.map((match) => (
+              
               <MatchCard key={match.id} match={match} layout={layout} />
+              
             ))}
           </div>
         ) : // Вариант для других страниц или пусто

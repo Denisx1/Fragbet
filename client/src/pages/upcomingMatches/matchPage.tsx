@@ -88,6 +88,11 @@ export const MatchPage: React.FC = () => {
   const lowTierCodes: { codeValue: string }[] = [
     ...(data?.lowTier?.codes ?? []),
   ];
+  const highTierCodesValues = Object.values(highTierCodes).sort((a, b) => {
+    if (a.codeValue === "s") return -1;
+    if (b.codeValue === "s") return 1;
+    return a.codeValue.localeCompare(b.codeValue);
+  });
 
   return (
     <div className={styles.matchContainer}>
@@ -95,7 +100,7 @@ export const MatchPage: React.FC = () => {
         <TodayData />
 
         {/* 🔸 Высокие тиры — по одному блоку */}
-        {highTierCodes.map((tier) => {
+        {highTierCodesValues.map((tier) => {
           const matchesForTier = matches.filter(
             (match) => match.tier === tier.codeValue
           );

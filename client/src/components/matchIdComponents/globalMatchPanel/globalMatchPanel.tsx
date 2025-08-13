@@ -1,35 +1,42 @@
 import React from "react";
 import style from "./styles.module.css";
 import type { MatchCardProps } from "../../../api/upcomingMatchesApi.ts/types";
+import TeamBlock from "../teamBlock/teamName";
+import TimeToStart from "../timeToStart/timeToStart";
+import MapMenu from "../mapMenu/mapNenu";
+
 const GlobalMatchPanel: React.FC<{ match: MatchCardProps }> = ({ match }) => {
-  console.log(match);
   return (
     <div className={style.globalMatchPanel}>
       <div className={style.globalMatch}>
         <div className={style.matchStatus}>
           <div className={style.matchesTitle}>
-            <div className={style.timeToStart}></div>
+            <TimeToStart
+              start_date={match.start_date}
+              ai_predictions={match.ai_predictions}
+              page="matchId"
+            />
+
             <div className={style.opponents}>
-              <div className={style.team1Name}>
-                <div className={style.team1nickName}>{match.team1?.name}</div>
-                <div className={style.team1Image}>
-                  <img src={match.team1?.image_url} id="team1Image" />
-                </div>
+              <TeamBlock
+                teamName={match.team1?.name}
+                imageUrl={match.team1?.image_url}
+                position="left"
+              />
+              <div className={style.boType}>
+                <div className={style.trapezoid}>Bo{match.bo_type}</div>
               </div>
-              <div className={style.vs}>BO</div>
-              <div className={style.team2Name}>
-                <div className={style.team2Image}>
-                  <img src={match.team2?.image_url} id="team1Image" />
-                </div>
-                <div className={style.team2nickName}>
-                  <div className={style.name}>{match.team2?.name}</div>
-                </div>
-              </div>
+              <TeamBlock
+                teamName={match.team2?.name}
+                imageUrl={match.team2?.image_url}
+                position="right"
+              />
             </div>
           </div>
         </div>
       </div>
-      <div className={style.mapMenu}></div>
+
+      <MapMenu bo_type={match.bo_type} />
     </div>
   );
 };

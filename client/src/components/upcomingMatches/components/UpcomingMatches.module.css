@@ -1,36 +1,17 @@
 .matchCard {
   width: 100%;
-  height: 35px;
+  height: 40px;
   display: flex;
   align-items: center;
   border-top: 1px solid #ddd; /* декоративная линия */
- 
-  
-}
-
-.firstBlock {
-  width: 12.5%;
-  font-size: 14px;
-}
-.teams {
-  display: flex;
-  align-items: center;
-  width: 75%;
-  gap: 8px;
-  min-width: 0; /* добавь, чтобы flex-container мог сжиматься */
-  overflow: hidden; /* если нужно, чтобы не вылазило */
 }
 
 .prediction {
-  width: 12.5%;
-}
-.matchPredictedInfo {
-  width: 100%;
+  width: 15%;
   display: flex;
   justify-content: flex-end;
-
-  padding-right: 10px;
   align-items: center;
+  gap: 30px;
 }
 .winnerNumber {
   width: 20px;
@@ -41,42 +22,21 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  margin-right: 5px;
 }
 .matchPredictedScore {
-  width: 65%;
   display: flex;
   justify-content: flex-end;
-  padding-right: 5px;
+  width: 40%;
 }
-.teamName {
-  flex: 1;
-  min-width: 0; /* обязательно */
-  display: flex;
-  align-items: center;
-}
+
 .boType {
-  background-color: #1b1e22;
-  padding: 5px;
-  border-radius: 5px;
+  width: 35%;
+  height: 100%;
+  display: flex;
   color: #fff;
-  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-}
-
-.team1Name,
-.team2Name {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
-  max-width: 100%;
-  height: 35px;
-  display: flex;
-  align-items: center;
 }
 
 .teamName:first-child {
@@ -87,4 +47,50 @@
 .teamName:last-child {
   justify-content: flex-start; /* для team2 */
   text-align: left;
+}
+.matchesTitle {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  justify-content: flex-start;
+}
+.opponents {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  gap: 10px;
+}
+
+.trapezoid {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 15px;
+  background-image: url("../../../../public/boLogo2.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeAndOpponents {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.time {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 17px;
 }

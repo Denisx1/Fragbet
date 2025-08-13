@@ -1,0 +1,23 @@
+.mapMenuBlock {
+  border-radius: 5px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mapMenu {
+  height: 70%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.map {
+  width: 30%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b1e22;
+  color: #fff;
+}

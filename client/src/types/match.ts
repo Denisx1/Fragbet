@@ -4,7 +4,7 @@ import type { IUpcomingGame } from "./upcomingGames";
 
 export interface IUpcomingMatch {
   id: number;
-  bo3_slug: string;
+  bo3_slug: number;
   status: string;
 
   start_date: string;
